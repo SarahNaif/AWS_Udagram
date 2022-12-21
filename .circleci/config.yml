@@ -20,7 +20,9 @@ jobs:
       # Use root level package.json to install dependencies in the frontend app
       - run:
           name: Front-End Install
-          command: npm run frontend:install
+          command: |
+               echo $(node --version)
+              npm run frontend:install
       - run:
           name: Back-End Install
           command: npm run backend:install
