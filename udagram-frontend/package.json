@@ -5,8 +5,8 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng  build",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && ng serve",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && ng  build",
     "deploy": " npm run build && aws s3 cp --recursive --acl public-read ./www s3://mybucketfrontend/",
     "test": "ng test --watch=false",
     "lint": "ng lint",
