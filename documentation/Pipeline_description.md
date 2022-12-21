@@ -2,7 +2,7 @@
 
 ## Commands
 
-1. install node , aws cli and eb cli.
+1. install node specfic version , aws cli and eb cli.
 2. FrontEnd  install
 3. Backend install
 4. FrontEnd build
