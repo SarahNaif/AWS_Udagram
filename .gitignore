@@ -1,0 +1,4 @@
+node_modules
+.env
+set_env.sh
+.elasticbeanstalk/
