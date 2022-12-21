@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng --openssl-legacy-provider build",
+    "build": "ng  build",
     "deploy": " npm run build && aws s3 cp --recursive --acl public-read ./www s3://mybucketfrontend/",
     "test": "ng test --watch=false",
     "lint": "ng lint",
