@@ -39,7 +39,7 @@ jobs:
 
 workflows:
   version: 2
-     jobs:
+  jobs:
         build:
             filters:
               branches:
