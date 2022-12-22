@@ -12,7 +12,7 @@
     "prod": "npx tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
     "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
-    "deploy": "npm run build && eb list && eb use udagram-api-dev && eb deploy",
+    "deploy": "npm run build && eb list && eb use udagram-api-dev && eb setenv AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY AWS_BUCKET=$AWS_BUCKET AWS_REGION=$AWS_DEFAULT_REGION AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID  JWT_SECRET=$JWT_SECRET POSTGRES_DB=$POSTGRES_DB  POSTGRES_HOST=$POSTGRES_HOST POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_PORT=$POSTGRES_PORT POSTGRES_USERNAME=$POSTGRES_USERNAME  --profile default && eb deploy ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

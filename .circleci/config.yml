@@ -46,9 +46,5 @@ workflows:
               branches:
                 only:  # only branches matching the below regex filters will run
                   - master
-      # - test_pre-prod:
-      #     filters:
-      #       branches:
-      #         only:  # only branches matching the below regex filters will run
-      #           - master
+ 
 

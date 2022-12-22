@@ -1,4 +1,6 @@
 
+[![CircleCI](https://circleci.com/<VCS>/<ORG_NAME>/<PROJECT_NAME>.svg?style=svg&circle-token=<YOUR_STATUS_API_TOKEN>)](<LINK>)
+
 # Udagram
 Hosting a Full-Stack Application: 
 This project is part of the Udacity FullStack JavaScript nanodegree. is provided to you as an alternative starter project 
