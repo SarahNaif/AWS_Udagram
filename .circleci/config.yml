@@ -39,16 +39,8 @@ jobs:
 
 workflows:
     jobs:
-      - build
-      - hold:
           filters:
             branches:
               # runs only on deploy branch for managing when to actually deploy the code
               only:
                 - master
-          type: Mapping
-          requires:
-            - build
-      - deploy:
-          requires:
-            - hold
