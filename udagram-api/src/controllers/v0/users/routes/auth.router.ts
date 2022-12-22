@@ -3,11 +3,11 @@ import {Router, Request, Response} from 'express';
 import {User} from '../models/User.js';
 import * as c from '../../../../config/config.js';
 
-import * as bcrypt from 'bcryptjs';
-import * as jwt from 'jsonwebtoken';
+import bcrypt from 'bcryptjs'
+import jwt from 'jsonwebtoken';
 import {NextFunction} from 'connect';
 
-import * as EmailValidator from 'email-validator';
+import EmailValidator from 'email-validator';
 import {config} from 'bluebird';
 
 const router: Router = Router();
@@ -15,7 +15,7 @@ const router: Router = Router();
 
 async function generatePassword(plainTextPassword: string): Promise<string> {
   const saltRounds = 10;
-  const salt = await bcrypt.genSalt(saltRounds);
+  const salt = await bcrypt.genSaltSync(saltRounds);
   return await bcrypt.hash(plainTextPassword, salt);
 }
 

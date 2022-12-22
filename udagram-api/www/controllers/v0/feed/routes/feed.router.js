@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { Router } from 'express';
 import { FeedItem } from '../models/FeedItem.js';
-import * as jwt from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 import * as AWS from '../../../../aws.js';
 import * as c from '../../../../config/config.js';
 const router = Router();

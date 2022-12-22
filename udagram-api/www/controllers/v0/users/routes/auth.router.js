@@ -10,14 +10,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import { Router } from 'express';
 import { User } from '../models/User.js';
 import * as c from '../../../../config/config.js';
-import * as bcrypt from 'bcryptjs';
-import * as jwt from 'jsonwebtoken';
-import * as EmailValidator from 'email-validator';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import EmailValidator from 'email-validator';
 const router = Router();
 function generatePassword(plainTextPassword) {
     return __awaiter(this, void 0, void 0, function* () {
         const saltRounds = 10;
-        const salt = yield bcrypt.genSalt(saltRounds);
+        const salt = yield bcrypt.genSaltSync(saltRounds);
         return yield bcrypt.hash(plainTextPassword, salt);
     });
 }
