@@ -7,9 +7,6 @@ orbs:
   # different jobs are calles later in the workflows sections
 jobs:
   build:
-    branches:
-      only:
-        - main/master
     docker:
       # the base image can run most needed actions with orbs
       - image: "cimg/node:16.13"
@@ -39,3 +36,12 @@ jobs:
       - run:
           name: Deploy Front-End
           command: npm run frontend:deploy
+
+workflows:
+  version: 2
+    build:
+      jobs:
+            filters:
+              branches:
+                only:
+                  - master
