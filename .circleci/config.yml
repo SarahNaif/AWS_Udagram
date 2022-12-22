@@ -46,9 +46,9 @@ workflows:
               # runs only on deploy branch for managing when to actually deploy the code
               only:
                 - master
-      #     type: approval
-      #     requires:
-      #       - build
-      # - deploy:
-      #     requires:
-      #       - hold
+          type: approval
+          requires:
+            - build
+      - deploy:
+          requires:
+            - hold
