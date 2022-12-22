@@ -3,6 +3,8 @@
 Hosting a Full-Stack Application: 
 This project is part of the Udacity FullStack JavaScript nanodegree. is provided to you as an alternative starter project 
 
+[![CircleCI](https://circleci.com/gh/SarahNaif/AWS_Udagram.svg?style=shield&circle-token=3a60df13122e7128fbfa3bc502651a3ab150bee1)](<LINK>)
+
 ## Link 
 http://mybucketfrontend.s3-website-us-east-1.amazonaws.com
 
