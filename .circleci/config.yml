@@ -15,7 +15,7 @@ jobs:
       - image: "cimg/node:16.13"
       # install node and checkout code
     steps:
-      - node/install
+      - node/install:
              node-version: '16.13'
       - checkout
       - aws-cli/setup
