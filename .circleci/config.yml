@@ -46,7 +46,7 @@ workflows:
               # runs only on deploy branch for managing when to actually deploy the code
               only:
                 - master
-          type: approval
+          type: Mapping
           requires:
             - build
       - deploy:
