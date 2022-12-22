@@ -38,10 +38,18 @@ jobs:
           command: npm run frontend:deploy
 
 workflows:
-  version: 2
-  jobs:
-        build:
-            filters:
-              branches:
-                only:
-                  - master
+  udagram:
+    jobs:
+      - build
+      - hold:
+          filters:
+            branches:
+              # runs only on deploy branch for managing when to actually deploy the code
+              only:
+                - master
+      #     type: approval
+      #     requires:
+      #       - build
+      # - deploy:
+      #     requires:
+      #       - hold
